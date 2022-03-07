@@ -3,9 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  # has_many :studios # studios.user_id
-  # has_many :owned_studios, foreign_key: :owner_id # OwnedStudios
+
+  # OWNER
   has_many :owned_studios, foreign_key: :owner_id, class_name: "Studio" # OwnedStudios
+  has_many :owner_bookings, through: :owned_studios, source: :bookings
+
+  # CUSTOMER
   has_many :customer_bookings, foreign_key: :customer_id, class_name: "Booking"
+
+  # OWNER
   has_many :booked_studios, through: :customer_bookings, source: :studio
 end
