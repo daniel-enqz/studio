@@ -1,4 +1,6 @@
 class StudiosController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
     @studios = Studio.all
   end
@@ -9,10 +11,10 @@ class StudiosController < ApplicationController
 
   def create
     @studio = Studio.new(studio_params)
-    raise
+    @studio.owner = current_user
 
     if @studio.save
-      redirect_to root, notice: 'Studio was successfully created.'
+      redirect_to root_path, notice: 'Studio was successfully created.'
     else
       render :new
     end
