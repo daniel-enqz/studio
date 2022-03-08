@@ -1,8 +1,8 @@
 <div class="container pt-3">
-  <h1>index</h1>
+  <h1>List of Studios</h1>
   <ul class="list-studios">
     <% @studios.each do |studio| %>
-      <li class="list-studio-item"><%= studio.name %></li>
+      <%= render 'studios/card', studio: studio %>
     <% end %>
   </ul>
 </div>

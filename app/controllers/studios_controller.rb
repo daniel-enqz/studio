@@ -12,7 +12,6 @@ class StudiosController < ApplicationController
   def create
     @studio = Studio.new(studio_params)
     @studio.owner = current_user
-
     if @studio.save
       redirect_to root_path, notice: 'Studio was successfully created.'
     else
