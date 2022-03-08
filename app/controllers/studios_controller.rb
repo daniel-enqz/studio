@@ -7,7 +7,7 @@ class StudiosController < ApplicationController
     @studio = Studio.new(studio_params)
 
     if @studio.save
-      redirect_to root_path, notice: 'Studio was successfully created.'
+      redirect_to root, notice: 'Studio was successfully created.'
     else
       render :new
     end
