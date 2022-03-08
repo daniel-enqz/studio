@@ -4,7 +4,7 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
+  opacity: 1;
   transition: opacity 0.3s ease;
   text-decoration: none;
   margin-top: 15px;
@@ -12,6 +12,6 @@
 }
 
 .btn-banner:hover {
-  opacity: 1;
+  opacity: 0.5;
   color:#FFFFFF;
 }
