@@ -1,8 +1,10 @@
 <div class="container pt-3">
   <h1>List of Studios</h1>
-  <ul class="list-studios">
+  <div class="list-studios row">
     <% @studios.each do |studio| %>
-      <%= render 'studios/card', studio: studio %>
+      <div class="col-6">
+        <%= render 'studios/card', studio: studio %>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>
