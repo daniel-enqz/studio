@@ -11,7 +11,7 @@
 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
+  <%= render 'shared/navbar' %>
 
 
 
@@ -19,19 +19,6 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
   </body>
-    <footer>
-      <div class="footer">
-        <div class="footer-links">
-          <a href="https://www.instagram.com/musicstudios/?hl=es" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/laplantastudio" target="_blank"><i class="fab fa-facebook"></i></a>
-          <a href="https://twitter.com/input_studio" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
-        <div class="footer-copyright">
-          This page was made by DEC students of Le Wagon
-          <a href="https://www.lewagon.com/" target="_blank">
-            <img class="leWagonIcon" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
-          </a>
-        </div>
-      </div>
-    </footer>
+
+  <%= render 'shared/footer' %>
 </html>
