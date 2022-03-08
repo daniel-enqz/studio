@@ -1,7 +1,8 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path "banner-studio.jpg"%>)">
+<div class="banner d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path "banner-studio.jpg"%>)">
   <div class="container text-center">
     <h1>Studiofy <strong>-Ready to go Pro</strong>?</h1>
-    <p>Wolrd class recording studios at your reach</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <p>World class recording studios at your reach</p>
+    <%= link_to "Find a studio", studios_path, class: "btn-banner"%>
+    # <%# <a href="#" class="btn-banner">Find a Studio</a> %>
   </div>
 </div>

@@ -1,0 +1,17 @@
+.btn-banner {
+  color:#FFFFFF ;
+  border: 1px solid #FFFFFF;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  margin-top: 15px;
+
+}
+
+.btn-banner:hover {
+  opacity: 0.5;
+  color:#FFFFFF;
+}
