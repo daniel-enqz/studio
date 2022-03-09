@@ -15,7 +15,6 @@ class StudiosController < ApplicationController
     authorize @studio
   end
 
-
   def create
     @studio = Studio.new(studio_params)
     @studio.owner = current_user
