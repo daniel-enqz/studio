@@ -1,5 +1,10 @@
 <div class="container pt-3">
   <h1>List of Studios</h1>
+
+  <% if policy(Studio).create? %>
+    <%= link_to "New studio", new_studio_path %>
+  <% end %>
+
   <div class="list-studios row">
     <% @studios.each do |studio| %>
       <div class="col-6">
