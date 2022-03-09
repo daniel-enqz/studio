@@ -8,6 +8,7 @@ class StudiosController < ApplicationController
 
   def show
     authorize @studio
+    @booking = Booking.new
   end
 
   def new

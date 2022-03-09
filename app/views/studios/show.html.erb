@@ -14,3 +14,17 @@
     <h2>Book Now</h2>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 ">
+      <h1>Booking</h1>
+      <h3>Set the date</h3>
+      <%= simple_form_for [@studio, @booking] do |f| %>
+        <%= f.input :start_on, html5: true, input_html: { data: { controller: "pick-day" } } %>
+        <%= f.input :end_on, html5: true, input_html: { data: { controller: "pick-day" } } %>
+        <%= f.button :submit, class: "btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

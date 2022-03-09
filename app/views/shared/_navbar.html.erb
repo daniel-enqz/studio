@@ -19,7 +19,7 @@
             <li class="nav-item dropdown">
               <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://pbs.twimg.com/profile_images/1180100303728844801/MJJRt0D3_400x400.jpg"/>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">My Dashboard</a>
+                <a><%= link_to "My Dashboard", dashboard_path, class: "dropdown-item"%></a>
                 <a><%= link_to "Log Out", destroy_user_session_path, class: "dropdown-item", method: :delete %></a>
             </li>
           <% else %>

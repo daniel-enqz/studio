@@ -1,19 +1,19 @@
-<div class="card mb-3" style="max-width: 540px;">
+<div class="studio-card card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
       <% if studio.photo.attached? %>
         <%= cl_image_tag studio.photo.key, width: 180, height: 152, crop: :fill %>
       <% else %>
-        <img src="https://place-hold.it/180x152" class="img-fluid rounded-start" alt="...">
+        <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
       <% end %>
 
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title"><%=studio.name%></h5>
-        <%=link_to "Visit", studio_path(studio) %>
+        <h5 class="card-title"><strong><em><%=studio.name%></em></strong></h5>
         <p class="card-text"> <%= studio.address %> </p>
-        <p class="card-text"><small class="text-muted">Owner: <%= studio.owner.full_name %></small></p>
+        <%=link_to "Visit", studio_path(studio), class: "btn btn-dark" %>
+        <p class="card-text"><small class="text-muted">Owner: <%= studio.owner.first_name %> <%= studio.owner.last_name %></small></p>
       </div>
     </div>
   </div>
