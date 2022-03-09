@@ -7,6 +7,7 @@ class StudiosController < ApplicationController
   end
 
   def show
+    authorize @studio
   end
 
   def new
