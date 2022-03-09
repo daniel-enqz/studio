@@ -1,16 +1,20 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-5">
-      <h2>Sign up</h2>
+      <h2>Join Studiofy Now</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :email,
-                      required: true,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" }%>
+          <div class="d-flex">
+            <%= f.input :first_name,
+                          required: true,
+                          autofocus: true %>
+            <%= f.input :last_name,
+                        required: true,
+                        autofocus: true %>
+          </div>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
