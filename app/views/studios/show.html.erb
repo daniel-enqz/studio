@@ -6,7 +6,7 @@
 <div class= "container pt-3 d-flex">
   <div class="w-50 p-3">
     <h1 class="fw-bold"><%=@studio.name.capitalize%></h1>
-    <h5 class="text-muted "> Welcom to <%= @studio.owner.full_name%>'studio</h5>
+    <h5 class="text-muted "> Welcom to <%= @studio.owner.first_name%>'studio</h5>
     <h4 class="fw-bold text-decoration-underline">Studio's details:</h4>
     <p> <%=@studio.details.nil? ? "This studio is located at #{@studio.address}" : @studio.details %></p>
   </div>

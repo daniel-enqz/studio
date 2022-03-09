@@ -28,6 +28,22 @@
     </div>
     <div class="col">
       <h3>Your Bookings</h3>
+      <% @dashboard.bookings.each do |studio| %>
+        <div class="studio-card card m-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <%= cl_image_tag studio.photo.key, height: 200, width: 200, crop: :fill %>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body ms-4">
+                <h3 class="card-title"><strong><em><%=studio.name%></em></strong></h3>
+                <p class="card-text"> <%= studio.address %> </p>
+                <%=link_to "Visit my Studio", studio_path(studio), class: "btn btn-dark" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
