@@ -8,4 +8,8 @@ class User::Dashboard
   def studios
     user.owned_studios
   end
+
+  def bookings
+    user.owned_bookings
+  end
 end
