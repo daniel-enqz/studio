@@ -14,7 +14,5 @@ class User < ApplicationRecord
   # CUSTOMER
   has_many :booked_studios, through: :customer_bookings, source: :studio
 
-  def dashboard
-    User::Dashboard.new(self)
   end
 end
