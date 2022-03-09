@@ -1,6 +1,16 @@
 <%# banner %>
 <div class="container">
-  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @studio.photo.attached? ? cl_image_path(@photo.photo.key) : asset_path('studio-default.jpg') %>)">
-    <h1><%= @studio.name %></h1>
+  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @studio.photo.attached? ? cl_image_path(@studio.photo.key) : asset_path('studio-default.jpg') %>)">
+  </div>
+</div>
+<div class= "container pt-3 d-flex">
+  <div class="w-50 p-3">
+    <h1 class="fw-bold"><%=@studio.name.capitalize%></h1>
+    <h5 class="text-muted "> Welcom to <%= @studio.owner.full_name%>'studio</h5>
+    <h4 class="fw-bold text-decoration-underline">Studio's details:</h4>
+    <p> <%=@studio.details.nil? ? "This studio is located at #{@studio.address}" : @studio.details %></p>
+  </div>
+  <div class="w-50 p-3" >
+    <h2>Book Now</h2>
   </div>
 </div>

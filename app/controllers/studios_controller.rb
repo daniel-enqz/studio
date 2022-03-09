@@ -20,7 +20,7 @@ class StudiosController < ApplicationController
     @studio.owner = current_user
     authorize @studio
     if @studio.save
-      redirect_to root_path, notice: 'Studio was successfully created.'
+      redirect_to studio_path(@studio), notice: 'Studio was successfully created.'
     else
       render :new
     end
@@ -33,6 +33,6 @@ class StudiosController < ApplicationController
   end
 
   def studio_params
-    params.require(:studio).permit(:name, :address, :photo, :owner)
+    params.require(:studio).permit(:name, :address, :photo, :owner, :details)
   end
 end
