@@ -1,8 +1,8 @@
-<div class="border-card card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
+<%= link_to studio, class: "studio-card card mb-3 text-decoration-none" do %>
+  <div class="row g-0 d-flex align-items-center">
     <div class="col-md-4">
       <% if studio.photo.attached? %>
-        <%= cl_image_tag studio.photo.key, width: 180, height: 152, crop: :fill %>
+        <%= cl_image_tag studio.photo.key, width: 180, height: 152, crop: :fill, class: "card-img" %>
       <% else %>
         <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
       <% end %>
@@ -10,11 +10,10 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title"><strong><em><%=studio.name%></em></strong></h5>
+        <h5 class="card-title text-dark"><strong><em><%=studio.name%></em></strong></h5>
         <p class="card-text"> <%= studio.address %> </p>
-        <%=link_to "Visit", studio_path(studio), class: "btn btn-dark" %>
-        <p class="card-text"><small class="text-muted">Owner: <%= studio.owner.first_name %> <%= studio.owner.last_name %></small></p>
+        <p class="card-text"><small class="text-muted"> tags go here</small></p>
       </div>
     </div>
   </div>
-</div>
+<% end %>

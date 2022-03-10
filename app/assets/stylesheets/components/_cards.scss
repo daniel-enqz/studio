@@ -9,7 +9,7 @@
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
 }
 
 .card-large {
@@ -19,6 +19,18 @@
 
 .border-card {
   border-radius: 10px;
+  .card-img {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,1);
+  }
+}
+.studio-card:hover{
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+
+.card-image {
+border-radius: 7px;
+box-shadow: 0 0 15px rgba(0,0,0,0.6);
 }
 
 .box-shadow {
