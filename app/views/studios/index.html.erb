@@ -3,10 +3,14 @@
     <div class="container d-flex justify-content-between m-1">
       <h1>List of Studios</h1>
       <nav class="navbar navbar-light ">
-        <form class="form-inline d-flex justify-content-between">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">🔍</button>
-        </form>
+        <%= simple_form_for :search, url: studios_path, method: :get do |f| %>
+          <div class="d-flex">
+            <%= f.input :query, label: false, placeholder: "Search" %>
+            <%= f.button :button, class: "btn-outline-secondary" do %>
+              <%= image_tag("search_icon.png", width: 20, height: 20) %>
+            <% end %>
+          </div>
+        <% end %>
       </nav>
     </div>
   </div>

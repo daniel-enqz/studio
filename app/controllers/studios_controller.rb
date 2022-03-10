@@ -3,7 +3,11 @@ class StudiosController < ApplicationController
   before_action :set_studio, only: [:show]
 
   def index
-    @studios = policy_scope(Studio)
+    if params.dig(:search, :query).present?
+      @studios = policy_scope(Studio).where("name ILIKE ?", "%#{params.dig(:search, :query)}%")
+    else
+      @studios = policy_scope(Studio)
+    end
   end
 
   def show
