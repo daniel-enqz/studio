@@ -1,58 +1,59 @@
-<div class="d-flex justify-content-center m-3">
-  <h1>Welcome, <%= current_user.first_name %></h1>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="d-flex justify-content-between">
-        <h3>Your Studios</h3>
-        <%= link_to "Add studio", new_studio_path, class: "btn btn-outline-primary" %>
+<div class="site">
+  <div class="d-flex justify-content-center m-3">
+    <h1>Welcome, <%= current_user.first_name %></h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-between">
+          <h3>Your Studios</h3>
+          <%= link_to "Add studio", new_studio_path, class: "btn btn-outline-primary" %>
+        </div>
+        <% @dashboard.studios.each do |studio| %>
+          <div class="studio-card card m-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <% if studio.photo.attached? %>
+                  <%= cl_image_tag studio.photo.key, height: 200, width: 200, crop: :fill %>
+                <% else %>
+                  <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
+                <% end %>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body ms-4">
+                  <h3 class="card-title"><strong><em><%=studio.name%></em></strong></h3>
+                  <p class="card-text"> <%= studio.address %> </p>
+                  <%=link_to "Visit my Studio", studio_path(studio), class: "btn btn-dark" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
-      <% @dashboard.studios.each do |studio| %>
-        <div class="studio-card card m-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <% if studio.photo.attached? %>
-                <%= cl_image_tag studio.photo.key, height: 200, width: 200, crop: :fill %>
-              <% else %>
-                <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
-              <% end %>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body ms-4">
-                <h3 class="card-title"><strong><em><%=studio.name%></em></strong></h3>
-                <p class="card-text"> <%= studio.address %> </p>
-                <%=link_to "Visit my Studio", studio_path(studio), class: "btn btn-dark" %>
+      <div class="col">
+        <h3>Your Bookings</h3>
+        <% @dashboard.bookings.each do |booking| %>
+          <div class="studio-card card m-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <% if booking.studio.photo.attached? %>
+                  <%= cl_image_tag booking.studio.photo.key, height: 200, width: 200, crop: :fill %>
+                <% else %>
+                  <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
+                <% end %>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body ms-4">
+                  <h3 class="card-title"><strong><em><%=booking.studio.name%></em></strong></h3>
+                  <p class="card-text"> <%= booking.studio.address %> </p>
+                  <%=link_to "Visit my Booking", studio_path(booking.studio), class: "btn btn-dark" %>
+                  <p class="card-text"><small class="text-muted">Owner: <%= booking.studio.owner.first_name %> <%= booking.studio.owner.last_name %></small></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
-    <div class="col">
-      <h3>Your Bookings</h3>
-      <% @dashboard.bookings.each do |booking| %>
-        <div class="studio-card card m-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <% if booking.studio.photo.attached? %>
-                <%= cl_image_tag booking.studio.photo.key, height: 200, width: 200, crop: :fill %>
-              <% else %>
-                <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
-              <% end %>
-            </div>
-            <div class="col-md-8">
-              <div class="card-body ms-4">
-                <h3 class="card-title"><strong><em><%=booking.studio.name%></em></strong></h3>
-                <p class="card-text"> <%= booking.studio.address %> </p>
-                <%=link_to "Visit my Booking", studio_path(booking.studio), class: "btn btn-dark" %>
-                <p class="card-text"><small class="text-muted">Owner: <%= booking.studio.owner.first_name %> <%= booking.studio.owner.last_name %></small></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
