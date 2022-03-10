@@ -1,5 +1,5 @@
 <%= link_to studio, class: "studio-card card mb-3 text-decoration-none" do %>
-  <div class="row d-flex align-items-center">
+  <div class="row g-0 d-flex align-items-center">
     <div class="col-md-4">
       <% if studio.photo.attached? %>
         <%= cl_image_tag studio.photo.key, width: 180, height: 152, crop: :fill, class: "card-img" %>
@@ -16,4 +16,4 @@
       </div>
     </div>
   </div>
-<%end%>
+<% end %>
