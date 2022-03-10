@@ -1,10 +1,10 @@
 class BookingPolicy < ApplicationPolicy
-  def new?
+  def create?
     user.present?
   end
 
-  def create?
-    user.present?
+  def destroy?
+    record.customer == user
   end
 
   class Scope < Scope

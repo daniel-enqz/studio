@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   resource :dashboard, only: :show
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :studios, only: %i[index show new create] do
-    resources :bookings, only: %i[create]
+  resources :studios, only: %i[index show new create edit update destroy] do
+    resources :bookings, only: %i[create edit update]
   end
+  resources :bookings, only: %i[destroy]
 end
