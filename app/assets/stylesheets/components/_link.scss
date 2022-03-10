@@ -1,0 +1,11 @@
+.category-remove-link {
+  color: rgb(255, 0, 0);
+  opacity: 0.8;
+  font-weight: lighter;
+  text-decoration: none;
+  &:hover {
+    transition: 0.1s ease;
+    font-size: 17px;
+    color: red;
+  }
+}
