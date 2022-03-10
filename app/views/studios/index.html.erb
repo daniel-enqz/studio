@@ -6,7 +6,9 @@
         <%= simple_form_for :search, url: studios_path, method: :get do |f| %>
           <div class="d-flex">
             <%= f.input :query, label: false, placeholder: "Search" %>
-            <%= f.button :submit, value: "🔍", class: "btn-outline-secondary" %>
+            <%= f.button :button, class: "btn-outline-secondary" do %>
+              <%= image_tag("search_icon.png", width: 20, height: 20) %>
+            <% end %>
           </div>
         <% end %>
       </nav>
