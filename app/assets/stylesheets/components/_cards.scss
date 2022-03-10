@@ -20,3 +20,17 @@
 .studio-card {
   border-radius: 10px;
 }
+
+.dashboard-cards {
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+  margin: 10px;
+}
+
+@media(max-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}
