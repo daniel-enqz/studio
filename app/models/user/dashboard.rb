@@ -10,6 +10,6 @@ class User::Dashboard
   end
 
   def bookings
-    user.owner_bookings
+    user.customer_bookings
   end
 end

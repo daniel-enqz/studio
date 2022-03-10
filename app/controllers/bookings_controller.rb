@@ -7,10 +7,10 @@ class BookingsController < ApplicationController
     @studio = Studio.find(params[:studio_id])
     @booking = Booking.new(booking_params)
     @booking.studio = @studio
-
+    @booking.customer = current_user
     authorize @booking
     if @booking.save
-      redirect_to studio_path(@studio)
+      redirect_to dashboard_path
     else
       render 'studios/show'
     end
