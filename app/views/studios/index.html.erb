@@ -6,7 +6,7 @@
           Studios that match
           <em class= "text-muted"><%= params.dig(:search, :query) %></em>
         </h1>
-
+        <%= link_to "Refresh", studios_path %>
       <% end %>
       <nav class="navbar navbar-light d-flex justify-content-center ">
         <%= simple_form_for :search, url: studios_path, method: :get do |f| %>
@@ -15,6 +15,7 @@
             <%= f.button :button, class: "btn-outline-secondary" do %>
               <%= image_tag("search_icon.png", width: 20, height: 20) %>
             <% end %>
+
           </div>
         <% end %>
       </nav>
