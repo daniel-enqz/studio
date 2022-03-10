@@ -17,7 +17,7 @@
   max-height: 400px;
 }
 
-.border-card {
+.studio-card {
   border-radius: 10px;
   .card-img {
     border-radius: 5px;
@@ -31,27 +31,4 @@
 .card-image {
 border-radius: 7px;
 box-shadow: 0 0 15px rgba(0,0,0,0.6);
-}
-
-.box-shadow {
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.dashboard-cards {
-  display: grid;
-  flex-grow: 1;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 16px;
-  margin: 10px;
-}
-
-@media(max-width: 768px) {
-  .dashboard-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-.bookings-card:hover {
-  transition: 1s ease;
-  transform: translateX(2rem)
 }
