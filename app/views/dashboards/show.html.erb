@@ -5,25 +5,20 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="d-flex justify-content-between">
-          <h3>Your Studios</h3>
-          <%= link_to "Add studio", new_studio_path, class: "btn btn-outline-primary" %>
-        </div>
+        <h3>Your Studios</h3>
         <% @dashboard.studios.each do |studio| %>
-          <div class="studio-card card m-3" style="max-width: 540px;">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <% if studio.photo.attached? %>
-                  <%= cl_image_tag studio.photo.key, height: 200, width: 200, crop: :fill %>
-                <% else %>
-                  <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
-                <% end %>
+          <div class="flip-card m-2">
+            <div class="flip-card-inner">
+              <div class="flip-card-front justify-content-between align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)))">
+                <h4 class="card-title mt-2 p-2"><%= studio.name %></h4>
+                <p class="mt-3 p-2"><span class="badge bg-success">Booked</span></h4>
               </div>
-              <div class="col-md-8">
-                <div class="card-body ms-4">
-                  <h3 class="card-title"><strong><em><%=studio.name%></em></strong></h3>
-                  <p class="card-text"> <%= studio.address %> </p>
-                  <%=link_to "Visit my Studio", studio_path(studio), class: "btn btn-dark" %>
+              <div class="flip-card-back justify-content-between align-items-center">
+                <div class="d-grid gap-2 d-md-block ms-2">
+                  <%=link_to "Visit", studio_path(studio), class: "btn badge rounded-pill bg-primary" %>
+                  <%=link_to "Edit", studio_path(studio), class: "btn badge rounded-pill  bg-dark" %>
+                  <%=link_to "Delete my Studio", studio_path(studio),  method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn badge rounded-pill  bg-warning" %>
+                </div>
                 </div>
               </div>
             </div>
