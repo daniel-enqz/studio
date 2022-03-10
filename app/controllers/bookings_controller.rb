@@ -1,7 +1,5 @@
 class BookingsController < ApplicationController
-
-  # /studios/26/booking/new
-  #         studio_id
+  before_action :set_studio, only: %i[edit update destroy]
 
   def create
     @studio = Studio.find(params[:studio_id])
@@ -16,9 +14,33 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    authorize @studio
+  end
+
+  def update
+    authorize @studio
+    if @studio.update(studio_params)
+      redirect_to dashboard_path(@studio)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
+    redirect_to dashboard_path, notice: 'Booking was successfully destroyed.'
+  end
+
   private
 
   def booking_params
     params.require(:booking).permit(:start_on, :end_on)
+  end
+
+  def set_studio
+    @studio = Studio.find(params[:id])
   end
 end

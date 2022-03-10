@@ -17,8 +17,12 @@
   max-height: 400px;
 }
 
-.studio-card {
+.border-card {
   border-radius: 10px;
+}
+
+.box-shadow {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .dashboard-cards {
@@ -33,4 +37,9 @@
   .dashboard-cards {
     grid-template-columns: 1fr;
   }
+}
+
+.bookings-card:hover {
+  transition: 1s ease;
+  transform: translateX(2rem)
 }

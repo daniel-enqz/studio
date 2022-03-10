@@ -1,6 +1,6 @@
 class StudiosController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :set_studio, only: [:show]
+  before_action :set_studio, only: %i[show edit update destroy]
 
   def index
     if params.dig(:search, :query).present?
@@ -29,6 +29,25 @@ class StudiosController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    authorize @studio
+  end
+
+  def update
+    authorize @studio
+    if @studio.update(studio_params)
+      redirect_to studio_path(@studio)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    authorize @studio
+    @studio.destroy
+    redirect_to dashboard_path, notice: 'List was successfully destroyed.'
   end
 
   private
