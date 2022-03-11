@@ -30,10 +30,8 @@
             </li>
           <% else %>
             <li>
-              <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-outline-primary m-1" %>
-            </li>
-            <li>
-              <%= link_to "Sign up", new_user_session_path, class: "btn btn-outline-primary m-1" %>
+              <%= link_to "Log in", new_user_session_path, class: "btn btn-outline-primary" %>
+              <a class="btn btn-outline-primary " href="/users/sign_up"> Sign Up</a>
             </li>
           <% end %>
       </ul>
