@@ -11,7 +11,7 @@
     <%= render "studios/show/studio_info"%>
   </div>
   <div class="w-50 p-3" >
-    <% if current_user.owns?(@studio) %>
+    <% if current_user&.owns?(@studio) %>
       <%= render "studios/show/visitors" %>
     <% else %>
       <%= render "studios/show/book_form" %>
