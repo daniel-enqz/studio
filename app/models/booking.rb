@@ -5,6 +5,7 @@ class Booking < ApplicationRecord
   validates :start_on, presence: true
   validates :start_on, :end_on, availability: true
   validate :end_on_after_start_on
+  enum status: { pending: 0, approved: 10, rejected: 20 }
 
   private
 
