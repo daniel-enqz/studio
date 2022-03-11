@@ -2,11 +2,23 @@
   <div class="d-flex justify-content-between m-2 col-11">
     <div class="container text-center">
       <% if params.dig(:search, :query).present? %>
-        <h1 class="fw-bold h4">
-          Studios that match
-          <em class= "text-muted"><%= params.dig(:search, :query) %></em>
-        </h1>
-        <%= link_to "Refresh", studios_path %>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%= link_to "All Studios", studios_path %></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Studios that match
+              <em class= "text-muted"><%= params.dig(:search, :query) %></em>
+            </li>
+          </ol>
+        </nav>
+      <% else %>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+              All Studios
+            </li>
+          </ol>
+        </nav>
       <% end %>
       <nav class="navbar navbar-light d-flex justify-content-center ">
         <%= simple_form_for :search, url: studios_path, method: :get do |f| %>

@@ -3,49 +3,31 @@
   <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @studio.photo.attached? ? cl_image_path(@studio.photo.key) : asset_path('studio-default.jpg') %>)">
   </div>
 </div>
-
-<% if @studio.owner == current_user %>
-  <div class= "container pt-3 d-flex">
-    <div class="w-50 p-3">
-      <div class="d-flex justify-content-between">
-        <h1 class="fw-bold"><%=@studio.name.capitalize%></h1>
-        <% if policy(@studio).edit? %>
-          <%= link_to "Edit my Studio", edit_studio_path(@studio), class: "btn btn-outline-secondary mt-3" %>
-        <% end %>
-      </div>
-      <h5 class="text-muted "> Welcome to <%= @studio.owner.first_name%>'s studio</h5>
-      <hr>
-      <p> <%= @studio.details %> </p>
-    </div>
-    <div class="w-50 p-3" >
-      <h3>Check who is visiting your studio:</h3>
-      <% @studio.bookings.each do |booking| %>
-        <div class="bookings-card border-card card w-fit m-2 box-shadow">
-          <div class="card-body">
-            <h5 class="card-title"><strong>Customer: </strong> <%= booking.customer.first_name %> <%= booking.customer.last_name %></h5>
-            <p class="card-text"><strong>From:</strong> <%= booking.start_on %> <strong>To:</strong> <%= booking.end_on %></p>
-            <a href="#" class="btn btn-primary">Contact</a>
-          </div>
-        </div>
-      <% end %>
-    </div>
+<div class= "container pt-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item"><%= link_to "All Studios", studios_path %></li>
+      <li class="breadcrumb-item active" aria-current="page"><%= @studio.name %></li>
+    </ol>
+  </nav>
+</div>
+<div class= "container pt-3 d-flex">
+  <div class="w-50 p-3">
+    <h1 class="fw-bold"><%=@studio.name.capitalize%></h1>
+    <h5 class="text-muted "> Welcome to <%= @studio.owner.first_name%>'s studio</h5>
+    <hr>
+    <p> <%= @studio.details %> </p>
   </div>
-<% else %>
-  <div class= "container pt-3 d-flex">
-    <div class="w-50 p-3">
-      <h1 class="fw-bold"><%=@studio.name.capitalize%></h1>
-      <h5 class="text-muted "> Welcome to <%= @studio.owner.first_name%>'s studio</h5>
-      <hr>
-      <p> <%= @studio.details %> </p>
-    </div>
-    <div class="w-50 p-3" >
-      <h1 class="fw-bold">Book Now</h1>
-      <h3>Select your dates</h3>
-      <%= simple_form_for [@studio, @booking] do |f| %>
-        <%= f.input :start_on, html5: true, input_html: { data: { controller: "pick-day" } } %>
-        <%= f.input :end_on, html5: true, input_html: { data: { controller: "pick-day" } } %>
-        <%= f.button :submit, class: "btn-primary mt-3" %>
-      <% end %>
-    </div>
+  <div class="w-50 p-3" >
+    <% if current_user.owns?(@studio) %>
+      <%= render "studios/show/visitors" %>
+    <% else %>
+      <%= render "studios/show/book_form" %>
+    <% end %>
   </div>
-<% end %>
+    <div style="width: 100%; height: 400px;"
+      data-controller="mapbox"
+      data-mapbox-markers-value="<%= @markers.to_json %>"
+      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</div>
