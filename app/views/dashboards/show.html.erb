@@ -33,17 +33,17 @@
       <div class="col-8">
         <h3>Your Bookings</h3>
         <% @dashboard.bookings.each do |booking| %>
-          <div class="studio-card card m-3" style="max-width: 650px;">
+          <div class="studio-card card m-3">
             <div class="row g-0">
-              <div class="col-md-4">
+              <div class="col-md-5 d-flex justify-content-center align-items-center">
                 <% if booking.studio.photo.attached? %>
-                  <%= cl_image_tag booking.studio.photo.key, height: 200, width: 200, crop: :fill %>
+                  <%= cl_image_tag booking.studio.photo.key, height: 240, width: 240, crop: :fill, class:"card-border box-shadow" %>
                 <% else %>
                   <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
                 <% end %>
               </div>
-              <div class="col-md-8">
-                <div class="card-body ms-4">
+              <div class="col-md-7">
+                <div class="card-body ms-1"" >
                   <h3 class="card-title"><strong><em><%=booking.studio.name%></em></strong></h3>
                   <p class="card-text"> <%= booking.studio.address %> </p>
                   <p class="card-text"><small class="text-muted">Owner: <%= booking.studio.owner.first_name %> <%= booking.studio.owner.last_name %></small></p>
