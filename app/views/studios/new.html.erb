@@ -11,7 +11,7 @@
                       as: :hidden,
                       input_html: { data: { geocoder_target: "address" } },
                       wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
-          <%= f.input :details, prepend: "Some studio details" %>
+          <%= f.input :details, placeholder:"The better the description, the more artists will come..." %>
           <div class="m-3"><%= f.input :photo, as: :file %></div>
         </div>
         <div class="form-actions">
