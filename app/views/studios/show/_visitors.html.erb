@@ -1,8 +1,8 @@
-<h3>Check who is visiting your studio:</h3>
+<h3>Check who booked your studio:</h3>
 <% @studio.bookings.each do |booking| %>
   <div class="bookings-card border-card card w-fit m-2 box-shadow">
     <div class="card-body">
-      <h5 class="card-title"><strong>Customer: </strong> <%= booking.customer.first_name %> <%= booking.customer.last_name %></h5>
+      <h5 class="card-title"><strong>Artist: </strong> <%= booking.customer.first_name %> <%= booking.customer.last_name %></h5>
       <p class="card-text"><strong>From:</strong> <%= booking.start_on %> <strong>To:</strong> <%= booking.end_on %></p>
       <div class="d-flex">
         <%= link_to "Approve", approve_booking_path(booking), class: "btn btn-primary me-1", method: :patch %>
