@@ -13,6 +13,8 @@ class StudiosController < ApplicationController
   def show
     authorize @studio
     @booking = Booking.new
+
+    @markers = [{ lat: @studio.latitude, lng: @studio.longitude }]
   end
 
   def new
