@@ -6,7 +6,6 @@
           Studios that match
           <em class= "text-muted"><%= params.dig(:search, :query) %></em>
         </h1>
-
       <% end %>
       <nav class="navbar navbar-light d-flex justify-content-center ">
         <%= simple_form_for :search, url: studios_path, method: :get do |f| %>

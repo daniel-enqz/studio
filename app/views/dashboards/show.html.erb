@@ -43,6 +43,7 @@
                   <h3 class="card-title"><strong><em><%=booking.studio.name%></em></strong></h3>
                   <p class="card-text"> <%= booking.studio.address %> </p>
                   <p class="card-text"><small class="text-muted">Owner: <%= booking.studio.owner.first_name %> <%= booking.studio.owner.last_name %></small></p>
+                  <p class="card-text"><strong>From:</strong> <%= booking.start_on %> <strong>To:</strong> <%= booking.end_on %></p>
                   <div class="d-flex flex-wrap">
                     <%=link_to "Visit", studio_path(booking.studio), class: "btn btn-primary me-1" %>
                     <a href="#" class="btn btn-outline-secondary me-1">Contact owner</a>
