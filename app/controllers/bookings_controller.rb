@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_studio, only: %i[edit update destroy]
+  before_action :set_studio, only: %i[edit update]
 
   def create
     @studio = Studio.find(params[:studio_id])
