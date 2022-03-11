@@ -17,4 +17,8 @@ class User < ApplicationRecord
   def dashboard
     User::Dashboard.new(self)
   end
+
+  def owns?(studio)
+    studio.owner == self
+  end
 end
