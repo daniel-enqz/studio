@@ -2,12 +2,13 @@ class Booking < ApplicationRecord
   belongs_to :customer, class_name: "User"
   belongs_to :studio
   has_one :owner, through: :studio
-  validates :start_on, :end_on, presence: true, uniqueness: true
-  validate :end_date_after_start_date
+  validates :start_on, presence: true
+  validates :start_on, :end_on, availability: true
+  validate :end_on_after_start_on
 
   private
 
-  def end_date_after_start_date
+  def end_on_after_start_on
     return if end_on.blank? || start_on.blank?
 
     if end_on < start_on
