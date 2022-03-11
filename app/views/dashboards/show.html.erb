@@ -56,9 +56,9 @@
                     <p class="card-text"><strong>Status: </strong><span class="badge bg-danger">Rejected</span></p>
                   <% end %>
                   <div class="d-flex flex-wrap">
-                    <%=link_to "Visit", studio_path(booking.studio), class: "btn btn-primary me-1" %>
+                    <%=link_to "View", studio_path(booking.studio), class: "btn btn-primary me-1" %>
                     <a href="#" class="btn btn-outline-secondary me-1">Contact owner</a>
-                    <%=link_to "Cancel", booking_path(booking),  method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+                    <%=link_to "Cancel booking", booking_path(booking),  method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
                   </div>
                 </div>
               </div>
