@@ -4,9 +4,18 @@
     <div class="card-body">
       <h5 class="card-title"><strong>Artist: </strong> <%= booking.customer.first_name %> <%= booking.customer.last_name %></h5>
       <p class="card-text"><strong>From:</strong> <%= booking.start_on %> <strong>To:</strong> <%= booking.end_on %></p>
+      <% if booking.pending? %>
+        <p class="card-text"><strong>Status: </strong><span class="badge bg-warning">Pending</span></p>
+      <% elsif booking.approved? %>
+        <p class="card-text"><strong>Status: </strong><span class="badge bg-success">Approved</span></p>
+      <% elsif booking.rejected? %>
+        <p class="card-text"><strong>Status: </strong><span class="badge bg-danger">Rejected</span></p>
+      <% end %>
       <div class="d-flex">
         <%= link_to "Approve", approve_booking_path(booking), class: "btn btn-primary me-1", method: :patch %>
+        <%= link_to "Unavailable", reject_booking_path(booking),  data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger me-1", method: :patch %>
         <a href="#" class="btn btn-outline-secondary">Contact</a>
       </div>
     </div>
+  </div>
 <% end %>
