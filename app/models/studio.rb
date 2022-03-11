@@ -2,7 +2,7 @@ class Studio < ApplicationRecord
   belongs_to :owner, class_name: "User"
   has_many :bookings
   has_one_attached :photo
-  validates :name, :photo, :address, presence: true
+  validates :name, :address, presence: true
   validates :details, length: {minimum: 5 }
 
   def unavailable_dates
