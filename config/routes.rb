@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   resources :studios, only: %i[index show new create edit update destroy] do
     resources :bookings, only: %i[create edit update]
   end
-  resources :bookings, only: %i[destroy]
+  resources :bookings, only: %i[destroy] do
+    member do
+      patch :approve
+    end
+  end
 end
