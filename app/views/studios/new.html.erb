@@ -1,7 +1,7 @@
 <div class="site">
   <div class="container-sm">
     <div class="d-flex flex-column m-5">
-      <h1>Create your new Studio! 🎥</h1>
+      <h1 class="fw-bold">Help amazing artists find your studio</h1>
       <hr>
       <%= simple_form_for @studio do |f| %>
         <div class="form-inputs">
@@ -15,8 +15,8 @@
           <div class="m-3"><%= f.input :photo, as: :file %></div>
         </div>
         <div class="form-actions">
-          <%= link_to "Cancel", :back, class:"btn btn-outline-warning" %>
-          <%= f.button :submit, class:"btn btn-outline-dark" %>
+          <%= link_to "Not really", :back, class:"btn btn-outline-warning" %>
+          <%= f.button :submit, class:"btn btn-outline-primary" %>
         </div>
       <% end %>
     </div>

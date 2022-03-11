@@ -3,5 +3,5 @@
 <%= simple_form_for [@studio, @booking] do |f| %>
   <%= f.input :start_on, html5: true, input_html: { data: { controller: "pick-day" } } %>
   <%= f.input :end_on, html5: true, input_html: { data: { controller: "pick-day" } }, label: "End on" %>
-  <%= f.button :submit, class: "btn-primary mt-3" %>
+  <%= f.button :submit, class: "btn-primary mt-3 w-100", value: "Book!" %>
 <% end %>

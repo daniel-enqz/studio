@@ -70,23 +70,3 @@
     </div>
   </div>
 </div>
-
-
-<%= link_to studio, class: "studio-card card mb-3 text-decoration-none" do %>
-  <div class="row g-0 d-flex align-items-center">
-    <div class="col-md-4">
-      <% if booking.studio.photo.attached? %>
-        <%= cl_image_tag booking.studio.photo.key, height: 200, width: 200, crop: :fill %>
-      <% else %>
-        <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
-      <% end %>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title text-dark"><strong><em><%=studio.name%></em></strong></h5>
-        <p class="card-text"> <%= studio.address %> </p>
-        <p class="card-text"><small class="text-muted"> tags go here</small></p>
-      </div>
-    </div>
-  </div>
-<% end %>
