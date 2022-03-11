@@ -1,6 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 import mapboxgl from "mapbox-gl"
 
+
 export default class extends Controller {
   static values = {
     apiKey: String,
@@ -16,7 +17,6 @@ export default class extends Controller {
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()
-
   }
 
   #fitMapToMarkers() {
@@ -25,7 +25,6 @@ export default class extends Controller {
     this.map.fitBounds(bounds, { padding: 70, maxZoom: 15, duration: 0 })
   }
 
-
   #addMarkersToMap() {
     this.markersValue.forEach((marker) => {
       new mapboxgl.Marker()
@@ -33,5 +32,4 @@ export default class extends Controller {
         .addTo(this.map)
     });
   }
-
 }
