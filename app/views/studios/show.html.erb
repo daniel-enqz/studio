@@ -17,7 +17,7 @@
       <%= render "studios/show/book_form" %>
     <% end %>
   </div>
-  <div style="width: 60%; height: 400px;"
+  <div class="rounded-1 box-shadow shadow" style="width: 60%; height: 400px;"
     data-controller="mapbox"
     data-mapbox-markers-value="<%= @markers.to_json %>"
     data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
