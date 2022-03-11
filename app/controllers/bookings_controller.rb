@@ -34,6 +34,17 @@ class BookingsController < ApplicationController
     redirect_to dashboard_path, notice: 'Booking was successfully destroyed.'
   end
 
+  def approve
+    @booking = Booking.find(params[:id])
+    @booking.update(state: "approved")
+    if @booking.state == "approved"
+      flash[:success] = "Booking successfully approved"
+    else
+      flash[:error] = "Booking not approved"
+    end
+    redirect_to bookings_path
+  end
+
   private
 
   def booking_params

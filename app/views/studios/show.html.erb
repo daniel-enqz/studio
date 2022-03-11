@@ -25,6 +25,7 @@
             <h5 class="card-title"><strong>Customer: </strong> <%= booking.customer.first_name %> <%= booking.customer.last_name %></h5>
             <p class="card-text"><strong>From:</strong> <%= booking.start_on %> <strong>To:</strong> <%= booking.end_on %></p>
             <a href="#" class="btn btn-primary">Contact</a>
+            <%= link_to 'Approve', approve_studio_booking_path(booking), class: "button-xs success", method: :post %>
           </div>
         </div>
       <% end %>
