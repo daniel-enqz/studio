@@ -34,6 +34,7 @@
         <h3>Your Bookings</h3>
         <% @dashboard.bookings.each do |booking| %>
           <div class="studio-card card m-3" style="max-width: 650px;">
+<<<<<<< HEAD
             <div class="row g-0">
               <div class="col-md-4">
                 <% if booking.studio.photo.attached? %>
@@ -59,11 +60,32 @@
                     <%=link_to "Visit", studio_path(booking.studio), class: "btn btn-primary me-1" %>
                     <a href="#" class="btn btn-outline-secondary me-1">Contact owner</a>
                     <%=link_to "Cancel", booking_path(booking),  method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+=======
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <% if booking.studio.photo.attached? %>
+                    <%= cl_image_tag booking.studio.photo.key, height: 200, width: 200, crop: :fill %>
+                  <% else %>
+                    <img src="https://place-hold.it/180x165" class="img-fluid rounded-start" alt="...">
+                  <% end %>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body ms-4">
+                    <h3 class="card-title"><strong><em><%=booking.studio.name%></em></strong></h3>
+                    <p class="card-text"> <%= booking.studio.address %> </p>
+                    <p class="card-text"><small class="text-muted">Owner: <%= booking.studio.owner.first_name %> <%= booking.studio.owner.last_name %></small></p>
+                    <p class="card-text"><strong>From:</strong> <%= booking.start_on %> <strong>To:</strong> <%= booking.end_on %></p>
+                    <div class="d-flex flex-wrap">
+                      <%=link_to "Visit", studio_path(booking.studio), class: "btn btn-primary me-1" %>
+                      <a href="#" class="btn btn-outline-secondary me-1">Contact owner</a>
+                      <%=link_to "Cancel", booking_path(booking),  method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+                    </div>
+>>>>>>> master
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+
         <% end %>
       </div>
     </div>

@@ -55,6 +55,11 @@ ActiveRecord::Schema.define(version: 2022_03_11_183948) do
     t.index ["studio_id"], name: "index_bookings_on_studio_id"
   end
 
+  create_table "dashboards", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "studios", force: :cascade do |t|
     t.string "name"
     t.string "address"
