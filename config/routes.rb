@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: %i[destroy] do
     member do
-      patch :approve
+      patch :approve, :reject
     end
   end
 end
