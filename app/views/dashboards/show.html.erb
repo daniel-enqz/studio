@@ -19,8 +19,8 @@
               </div>
               <div class="flip-card-back justify-content-evenly align-items-center p-2">
                 <%=link_to "Visit", studio_path(studio), class: "btn btn-primary btn-sm me-1 rounded-3" %>
-                <%= link_to "Edit", edit_studio_path(studio), class: "btn btn-primary btn-sm me-1 rounded-3" %>
-                <%=link_to "Delete", studio_path(studio),  method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-sm rounded-3" %>
+                <%= link_to "Edit", edit_studio_path(studio), class: "btn btn-outline-secondary btn-sm me-1 rounded-3" %>
+                <%=link_to "Delete", studio_path(studio),  method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger btn-sm rounded-3" %>
               </div>
             </div>
           </div>
@@ -29,7 +29,7 @@
       <div class="col-8">
         <h3>Your Bookings</h3>
         <% @dashboard.bookings.each do |booking| %>
-          <div class="studio-card card m-3" style="max-width: 540px;">
+          <div class="studio-card card m-3" style="max-width: 650px;">
             <div class="row g-0">
               <div class="col-md-4">
                 <% if booking.studio.photo.attached? %>
@@ -44,8 +44,8 @@
                   <p class="card-text"> <%= booking.studio.address %> </p>
                   <p class="card-text"><small class="text-muted">Owner: <%= booking.studio.owner.first_name %> <%= booking.studio.owner.last_name %></small></p>
                   <div class="d-flex flex-wrap">
-                    <%=link_to "Visit", studio_path(booking.studio), class: "btn btn-dark me-1" %>
-                    <a href="#" class="btn btn-primary me-1">Contact owner</a>
+                    <%=link_to "Visit", studio_path(booking.studio), class: "btn btn-primary me-1" %>
+                    <a href="#" class="btn btn-outline-secondary me-1">Contact owner</a>
                     <%=link_to "Cancel", booking_path(booking),  method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
                   </div>
                 </div>
