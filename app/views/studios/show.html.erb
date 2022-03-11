@@ -4,19 +4,11 @@
   </div>
 </div>
 <div class= "container pt-3">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb mb-0">
-      <li class="breadcrumb-item"><%= link_to "All Studios", studios_path %></li>
-      <li class="breadcrumb-item active" aria-current="page"><%= @studio.name %></li>
-    </ol>
-  </nav>
+  <%= render "studios/show/breadcrums"  %>
 </div>
 <div class= "container pt-3 d-flex">
   <div class="w-50 p-3">
-    <h1 class="fw-bold"><%=@studio.name.capitalize%></h1>
-    <h5 class="text-muted "> Welcome to <%= @studio.owner.first_name%>'s studio</h5>
-    <hr>
-    <p> <%= @studio.details %> </p>
+    <%= render "studios/show/studio_info"%>
   </div>
   <div class="w-50 p-3" >
     <% if current_user.owns?(@studio) %>
@@ -25,9 +17,9 @@
       <%= render "studios/show/book_form" %>
     <% end %>
   </div>
-    <div style="width: 100%; height: 400px;"
-      data-controller="mapbox"
-      data-mapbox-markers-value="<%= @markers.to_json %>"
-      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+  <div style="width: 100%; height: 400px;"
+    data-controller="mapbox"
+    data-mapbox-markers-value="<%= @markers.to_json %>"
+    data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
