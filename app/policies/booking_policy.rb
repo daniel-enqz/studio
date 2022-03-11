@@ -11,6 +11,10 @@ class BookingPolicy < ApplicationPolicy
     record.studio.owner == user
   end
 
+  def reject?
+    record.studio.owner == user
+  end
+
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
      def resolve

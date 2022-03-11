@@ -1,4 +1,3 @@
-<%# banner %>
 <div class="container">
   <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @studio.photo.attached? ? cl_image_path(@studio.photo.key) : asset_path('studio-default.jpg') %>)">
   </div>
