@@ -2,7 +2,7 @@ class Studio < ApplicationRecord
   belongs_to :owner, class_name: "User"
   has_many :bookings
   has_one_attached :photo
-  validates :name, presence: true
+  validates :name, :address, presence: true
 
   def unavailable_dates
     bookings.pluck(:start_on, :end_on).map do |range|
