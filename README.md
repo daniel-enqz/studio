@@ -6,7 +6,7 @@
 <img src="https://user-images.githubusercontent.com/72522628/158202974-d2d8c39f-290f-4258-9ef8-6bc4539cdeeb.png" alt="booking" style="box-shadow: 10px 10px 5px #ccc"/>
 
 ## Main Features
-- Herohu
+- Heroku
 - Cloudify
 - Policies for authorization with pundit
  ```ruby
