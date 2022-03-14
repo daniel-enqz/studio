@@ -57,7 +57,7 @@
 > Search (transform address into coordinates to be used by mapbox) `@mapbox/mapbox-gl-geocoder`<br>
 > Flatpickr ( For Selecting Date feature from calendar ) <br>
 > <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"> <br>
-> ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) Stimulus <br>
+> Stimulus <br>
 
 ## Setup
 
