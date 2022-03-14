@@ -3,11 +3,12 @@
 
 <img src="https://user-images.githubusercontent.com/72522628/158201654-5393ee70-9e3c-4bca-b81e-a5815ec490f7.png" alt="homepage" style="box-shadow: 10px 10px 5px #ccc"/>
 <img src="https://user-images.githubusercontent.com/72522628/158202967-3f0ce9b9-e2fd-49d0-8a44-2e311f0e23da.png" alt="studios" style="box-shadow: 10px 10px 5px #ccc"/>
-<img src="https://user-images.githubusercontent.com/72522628/158202974-d2d8c39f-290f-4258-9ef8-6bc4539cdeeb.png" alt="booking" style="box-shadow: 10px 10px 5px #ccc"/>
 
 ## Main Features
 - A user can create/edit/delete a studio
 - Users can book/rent a Studio
+<img src="https://user-images.githubusercontent.com/72522628/158202974-d2d8c39f-290f-4258-9ef8-6bc4539cdeeb.png" alt="booking" style="box-shadow: 10px 10px 5px #ccc"/>
+
 - Users can access their own dashboard to admin everything
 ![dashboard](https://user-images.githubusercontent.com/72522628/158240393-7ff6290d-08bd-4a27-a965-4d7226758c81.png)
 
