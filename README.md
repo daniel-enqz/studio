@@ -29,7 +29,7 @@
  rails db:create db:migrate db:seed:replant
  rails server
 ```
-Open localhost:3000/ in your prefered web browser
+Open you browser and visit `localhost:3000`.
 
 * Database creation
 
