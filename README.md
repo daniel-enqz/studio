@@ -47,8 +47,10 @@
 > <img src="https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white"> <strong> 6.1.4.6 </strong>
 ### Tools Used
 > Heroku Deployment
-`heroku/7.59.2 linux-x64 node-v12.21.0 `
+`heroku/7.59.2 linux-x64 node-v12.21.0 `<br>
 > Cloudinary (Host user studios images) `config.active_storage.service = :cloudinary`
+> Geocoder (Mapbox API)
+> Search
 
 ## Setup
 
