@@ -20,14 +20,4 @@
  yarn install
  rails server
 ```
-Open you browser and visit `localhost:3000`.
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+Open you browser and visit `localhost:3000`
