@@ -28,7 +28,7 @@
 
 - Cloudinary (Host user studios images) `config.active_storage.service = :cloudinary`
 - <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
-- Authetication with Devise
+- Authetication with Devise for users login/signup/password reset etc..
 - Policies for authorization with pundit
  ```ruby
  class StudioPolicy < ApplicationPolicy
@@ -45,9 +45,6 @@
   end
   [...]
 ```
-- Geocoder / Mapbox API
-- Search
-- Validations
 
 ## Things you may want to cover to initialize this project:
 > <img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white"> <strong> 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]</strong><br>
