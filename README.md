@@ -22,11 +22,6 @@
 
 ![Screenshot 2022-03-14 at 12-53-50 Studiofy](https://user-images.githubusercontent.com/72522628/158241719-28e8a7b5-3e1f-4ce9-a31f-5e4360d87cb6.png)
 
-
-- Heroku Deployment
-`heroku/7.59.2 linux-x64 node-v12.21.0 `
-
-- Cloudinary (Host user studios images) `config.active_storage.service = :cloudinary`
 - <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
 - Authetication with Devise for users login/signup/password reset etc..
 - Policies for authorization with pundit
@@ -51,6 +46,9 @@
 > <img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white"> <strong> 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]</strong><br>
 > <img src="https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white"> <strong> 6.1.4.6 </strong>
 ### Tools Used
+> Heroku Deployment
+`heroku/7.59.2 linux-x64 node-v12.21.0 `
+> Cloudinary (Host user studios images) `config.active_storage.service = :cloudinary`
 
 ## Setup
 
