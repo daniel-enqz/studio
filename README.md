@@ -53,8 +53,8 @@
 > Heroku Deployment
 `heroku/7.59.2 linux-x64 node-v12.21.0 `<br>
 > Cloudinary (Host user studios images) `config.active_storage.service = :cloudinary` <br>
-> Geocoder (Mapbox API) <br>
-> Search <br>
+> Geocoder (Mapbox API) `mapbox-gl`<br>
+> Search (transform address into coordinates to be used by mapbox) `@mapbox/mapbox-gl-geocoder`<br>
 
 ## Setup
 
