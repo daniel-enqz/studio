@@ -19,6 +19,7 @@
 ![Screenshot 2022-03-14 at 12-54-02 Studiofy](https://user-images.githubusercontent.com/72522628/158241740-b893e66c-6400-4d87-9c1d-01a6c2409a08.png)
 
 - Users can accept/reject booking
+
 ![Screenshot 2022-03-14 at 12-53-50 Studiofy](https://user-images.githubusercontent.com/72522628/158241719-28e8a7b5-3e1f-4ce9-a31f-5e4360d87cb6.png)
 
 
