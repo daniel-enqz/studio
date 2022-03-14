@@ -25,7 +25,14 @@
 
 
 - Heroku Deployment
+`git remote -v
+heroku  https://git.heroku.com/studiofy-now.git (fetch)
+heroku  https://git.heroku.com/studiofy-now.git (push)
+origin  git@github.com:daniel-enqz/studio.git (fetch)
+origin  git@github.com:daniel-enqz/studio.git (push) `
+
 - Cloudinary (Host user studios images)
+- Database
 - Authetication with Devise
 - Policies for authorization with pundit
  ```ruby
