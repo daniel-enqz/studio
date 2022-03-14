@@ -21,7 +21,14 @@
 
 * System dependencies
 
-* Configuration
+## Setup
+
+```shell
+ git clone git@github.com:rodloboz/devhire.git
+ cd devhire
+ rails db:create db:migrate db:seed
+ rails server
+```
 
 * Database creation
 
