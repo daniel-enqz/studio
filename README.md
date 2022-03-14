@@ -8,7 +8,7 @@
 ## Things you may want to cover to initialize this project:
 
 * Ruby and Rails version
->- ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
+>- Ruby 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]
 >- Rails 6.1.4.6
 
 ## Setup
