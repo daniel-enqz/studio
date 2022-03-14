@@ -24,6 +24,10 @@
 
 - <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
 - Authetication with Devise for users login/signup/password reset etc..
+ ```ruby
+ devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
+ ```
 - Policies for authorization with pundit
  ```ruby
  class StudioPolicy < ApplicationPolicy
@@ -48,9 +52,9 @@
 ### Tools Used
 > Heroku Deployment
 `heroku/7.59.2 linux-x64 node-v12.21.0 `<br>
-> Cloudinary (Host user studios images) `config.active_storage.service = :cloudinary`
-> Geocoder (Mapbox API)
-> Search
+> Cloudinary (Host user studios images) `config.active_storage.service = :cloudinary` <br>
+> Geocoder (Mapbox API) <br>
+> Search <br>
 
 ## Setup
 
