@@ -27,7 +27,7 @@
 - Heroku Deployment
 `heroku/7.59.2 linux-x64 node-v12.21.0 `
 
-- Cloudinary (Host user studios images)
+- Cloudinary (Host user studios images) `config.active_storage.service = :cloudinary`
 - Database
 - Authetication with Devise
 - Policies for authorization with pundit
