@@ -13,6 +13,17 @@
 ![dashboard](https://user-images.githubusercontent.com/72522628/158240393-7ff6290d-08bd-4a27-a965-4d7226758c81.png)
 
 - Users can see booking status of their created studios
+
+![Screenshot 2022-03-14 at 12-52-02 Studiofy](https://user-images.githubusercontent.com/72522628/158241582-f698b397-f42a-4482-a06a-7dd360a9cdd9.png)
+![Screenshot 2022-03-14 at 12-53-30 Studiofy](https://user-images.githubusercontent.com/72522628/158241595-609bd802-8811-454a-99e0-06c6577afc54.png)
+![Screenshot 2022-03-14 at 12-54-02 Studiofy](https://user-images.githubusercontent.com/72522628/158241740-b893e66c-6400-4d87-9c1d-01a6c2409a08.png)
+
+- Users can accept/reject booking
+
+![Screenshot 2022-03-14 at 12-53-39 Studiofy](https://user-images.githubusercontent.com/72522628/158241697-f630ed2b-cbe4-486c-ad70-be9fc1385089.png)
+![Screenshot 2022-03-14 at 12-53-50 Studiofy](https://user-images.githubusercontent.com/72522628/158241719-28e8a7b5-3e1f-4ce9-a31f-5e4360d87cb6.png)
+
+
 - Heroku Deployment
 - Cloudinary (Host user studios images)
 - Authetication with Devise
