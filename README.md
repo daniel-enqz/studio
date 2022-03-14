@@ -25,11 +25,7 @@
 
 
 - Heroku Deployment
-`git remote -v
-heroku  https://git.heroku.com/studiofy-now.git (fetch)
-heroku  https://git.heroku.com/studiofy-now.git (push)
-origin  git@github.com:daniel-enqz/studio.git (fetch)
-origin  git@github.com:daniel-enqz/studio.git (push) `
+`heroku/7.59.2 linux-x64 node-v12.21.0 `
 
 - Cloudinary (Host user studios images)
 - Database
