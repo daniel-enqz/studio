@@ -6,8 +6,13 @@
 <img src="https://user-images.githubusercontent.com/72522628/158202974-d2d8c39f-290f-4258-9ef8-6bc4539cdeeb.png" alt="booking" style="box-shadow: 10px 10px 5px #ccc"/>
 
 ## Main Features
-- Heroku
-- Cloudify
+- A user can create/edit/delete a studio
+- Users can book/rent a Studio
+- Users can access their own dashboard to admin everything
+- Users can see booking status of their created studios
+- Heroku Deployment
+- Cloudinary (Host user studios images)
+- Authetication with Devise
 - Policies for authorization with pundit
  ```ruby
  class StudioPolicy < ApplicationPolicy
@@ -24,6 +29,9 @@
   end
   [...]
 ```
+- Geocoder / Mapbox API
+- Search
+- Validations
 
 ## Things you may want to cover to initialize this project:
 > <img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white"> <strong> 3.0.3p157 (2021-11-24 revision 3fb7d2cadc) [x86_64-linux]</strong><br>
