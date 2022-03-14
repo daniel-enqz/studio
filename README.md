@@ -1,5 +1,8 @@
 # AIRBNB CLONE USING RUBY ON RAILS
 ### CHECK DEPLOYED <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> APP [HERE](https://studiofy-now.herokuapp.com/)
+
+![image](https://user-images.githubusercontent.com/72522628/158200903-9538bc69-fd30-47dc-8d3c-a42c54c26e80.png)
+
 ## Main Features
 - Herohu
 - Cloudify
