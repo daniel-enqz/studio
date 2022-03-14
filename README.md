@@ -23,3 +23,19 @@
  rails server
 ```
 Open you browser and visit `localhost:3000`
+
+```ruby
+ class StudioPolicy < ApplicationPolicy
+  def create?
+    true
+  end
+
+  def show?
+    true
+  end
+
+  def update?
+    record.owner == user
+  end
+  [...]
+```
