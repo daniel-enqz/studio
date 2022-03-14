@@ -9,6 +9,8 @@
 - A user can create/edit/delete a studio
 - Users can book/rent a Studio
 - Users can access their own dashboard to admin everything
+![dashboard](https://user-images.githubusercontent.com/72522628/158240393-7ff6290d-08bd-4a27-a965-4d7226758c81.png)
+
 - Users can see booking status of their created studios
 - Heroku Deployment
 - Cloudinary (Host user studios images)
