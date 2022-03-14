@@ -9,7 +9,7 @@
 - Herohu
 - Cloudify
 - Policies for authorization with pundit
-- ```ruby
+ ```ruby
  class StudioPolicy < ApplicationPolicy
   def create?
     true
