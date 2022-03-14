@@ -24,11 +24,12 @@
 ## Setup
 
 ```shell
- git clone git@github.com:rodloboz/devhire.git
- cd devhire
- rails db:create db:migrate db:seed
+ git clone git@github.com:daniel-enqz/studio.git
+ cd studio
+ rails db:create db:migrate db:seed:replant
  rails server
 ```
+Open localhost:3000/ in your prefered web browser
 
 * Database creation
 
