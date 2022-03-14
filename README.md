@@ -16,9 +16,9 @@
  git clone git@github.com:daniel-enqz/studio.git
  cd studio
  rails db:create db:migrate db:seed:replant
- rails server
  bundle install
  yarn install
+ rails server
 ```
 Open you browser and visit `localhost:3000`.
 
